@@ -3,6 +3,15 @@ M4Week1AssgnData$Date<-as.Date(M4Week1AssgnData$Date,"%d/%m/%Y")
 M4Week1AssgnData$Time<-as.character(M4Week1AssgnData$Time)
 M4Week1AssgnData$Time<-strptime(paste(M4Week1AssgnData$Date,M4Week1AssgnData$Time),format = "%F %H:%M:%S")
 
+M4Week1AssgnData$Sub_metering_1<-as.character(M4Week1AssgnData$Sub_metering_1)
+M4Week1AssgnData$Sub_metering_1<-as.numeric(M4Week1AssgnData$Sub_metering_1)
+
+M4Week1AssgnData$Sub_metering_2<-as.character(M4Week1AssgnData$Sub_metering_2)
+M4Week1AssgnData$Sub_metering_2<-as.numeric(M4Week1AssgnData$Sub_metering_2)
+
+M4Week1AssgnData$Sub_metering_3<-as.character(M4Week1AssgnData$Sub_metering_3)
+M4Week1AssgnData$Sub_metering_3<-as.numeric(M4Week1AssgnData$Sub_metering_3)
+
 HH_EngData_Feb2007<-M4Week1AssgnData[M4Week1AssgnData$Date>="2007-02-01" & M4Week1AssgnData$Date<="2007-02-02",]
 
 png(filename = "plot3.png")## Open png device; create 'plot3.png' in my working directory
